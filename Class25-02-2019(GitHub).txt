@@ -1,0 +1,52 @@
+GitHub Class  25-02-2019  Monday
+
+Create a Repository
+1. login in to gitHub.com
+2. click'New' or click '+' -> New Repository
+3.specify 'Repository name'  RF25
+4. Click Create Repository
+5.Copy the Repository URL (URI)
+https://github.com/javabhanu/RF25.gitHub
+
+
+Uploading JavaProject (framework) to github
+1. Right Click on JP -> team->Share Project
+2. Click create; type '\RF25' after the path,click finish
+again click Finish.
+3. Right Click on JP -> team->commit
+4. drag and drop all the files from 'unstaged' to 'staged'
+5. Specify the message , click 'Commit & push'
+6. Specify 'URI' , UN & PED , select the checkbox,Click Next
+7.Click Next
+8.Click Finish
+9. Click Close() (if there any popup for password hint click NO)
+
+
+Description:
+1.Admin will create gitHub account
+2. Automation Lead or Automation Architect will create the repository and upload the Framework to gitHub
+3. we download the Framework from gitHub
+
+Importing Framework(JavaProject) from GitHub to Local System
+1. In Eclipse go to file import
+2. Expand Git -> Select Projects from Git->next
+3. select clone URI -> next
+4. Specify URI  username and password  , Select the checkbox -> click next
+5.click next(if there is any error change the name of the folder RF25a)
+
+Ensure that first radio button is selected -. click next -> click Finish
+
+?
+>
+x
+
+Push:
+If we create a new file(?) , if we modify existing file(>) or if we delete an existing file(x) then 
+we should perform this action i e 
+right click on File or java project -> go to team -> select commit -> drag and drop the file from unstage to staged->
+Specify the message->Click on Commit and push and click close()
+
+Pull:
+In order to get the latestUpdate from gitHub repository to Local system
+we should perform this action
+1. Right click on java project->goto team->select pull and click close
