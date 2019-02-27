@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+//count number of words in input String
+public class CountWords 
+{
+   
+	public static void main(String[] args) 
+	{
+      String str="";
+      int count=0;
+      
+      Scanner scn=new Scanner(System.in);
+       System.out.println("Enter a string");
+      str=scn.nextLine();
+      
+      char[] c1=new char[str.length()];
+      c1=str.toCharArray();
+      
+      for (int i = 0; i < c1.length; i++) 
+      {
+    	  if(((i>0)&&(c1[i]!=' ')&&(c1[i-1]==' '))||((c1[0]!=' ')&&(i==0)))
+    	  {
+    		  count++;
+    	  }
+		
+	  }
+      System.out.println("Number of words : "+count);
+      
+	}
+
+}
