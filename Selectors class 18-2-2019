@@ -1,0 +1,92 @@
+8 clock batch  18-2-2019   Bhanu
+------------------------------------
+
+
+Both LinkText , partialLinkText  both can be used to find the element tag name a ,
+if you use it on any type of element we get no such Elelement Exception
+
+Example for linkText:
+driver.findElelement(By.LinkText("Google"));
+
+if the text of the link is changing partially , we can use partialLinkText
+Example:
+html code of a link
+<a......>Inbox(3)</a>
+
+Selnium Code
+driver.findElelement(By.LinkText("Inbox")).click();
+
+Limitation:
+1.Elelement Should be link
+          <span ...>Inbox(3)</span>  - we cannnot use for this
+2. Text should change partially
+          <span>23</span> - we cannot use this
+		  
+cssSelector
+---------------------
+1.css stands for cascading stylesheets
+2.css selector is one of the locator 
+synatx is
+tag[AN='AV']  AN-Attribute Name , AV-AttributeValue
+
+Example:
+
+a[id='a1']
+a[name='n1']
+a[class='c1']
+a[href='http://wwww.google.com']
+
+4. limitations of cssSelector
+   it doesnot support text
+5  WE can chek the expression in browser
+
+   a.inspect any elelmet
+   b.press ctr+f
+   c.type the expression
+   
+      1 of 1 -. one matches
+	  0 of 0 - zero matches
+	  1 of 3 - multiple matches	  
+	  
+	  if we do any synatx mistake while writing css expression or xpath expression , then we get 'InvalidSelectorException' 
+	  
+	  
+Xpath in Selenium
+------------------------- 
+	  
+path of the element in html tree is called xpath
+
+1. while writing html tag we write . in the beginning which represtents - current webpage which is html document
+2. using . at the beginning is not mandatary
+3. to navigate from parent to child element we use single forward /	  
+
+Exmaple:
+
+html document
+---------------
+
+<html>
+  <body>
+    <a>
+	
+xpath :	html/body/a
+
+driver.findElelement(By.xpath("html/body/a")).click();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
