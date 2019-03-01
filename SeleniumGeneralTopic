@@ -1,0 +1,76 @@
+70 most popular questions - Rahul shetty
+
+1. what is the difference between get and post
+-> get("http:/google.com") -> wait until page get loaded completely
+-> driver.window().navigate()->will not wait until page get loaded completely.
+
+2. difference between quite() and close() methods in selenium Webdriver
+quite() - closes all the opned browser.
+close() - closes only current browser.
+
+3.Implicit Wait() and Explicit Wait()
+
+1.Implicit Wait()
+ -> driver.manage().timeout().implicitlyWait(10, TimeUnit.SECONDS)
+ 
+ WebDriverWait wait=new WebDriverWait(10,TimeUnit.SECONDS);
+ wait.until(ExpectetedCondition(visibilityofElelement(driver.findElement(By.id('xyz'))))
+ 
+ 2.how to handle SSLCertificate
+ -> DesiredCapability obj=new DesiredCapability()
+ obj.setCapability(SSLCertificate,true)
+ 
+ tagname[AN*='AV']
+ 
+ GOOGLE
+ 
+ Practise
+-----------------
+
+Navigation Commands
+
+driver.navigate().forward()
+driver.navigate().backword()
+driver.navigate().to()
+driver.navigate().refresh()
+
+How to find list 
+driver.findElements(By.xpath("//div[@id='example']//ul/li)
+
+
+Data drivern testing
+
+download apachi poi
+
+       public static string getCellValue(String path,String sheet,int r,int c)
+	   {
+			String v= " ";			
+			WorkBook wb=workbookFactory.createFile(new file("C:/testdata.xlsx"));
+			v= wb.getSheet(sheet).getRow(r).getCell(c).getStringCellValue();
+      return v;			
+	   }
+	   
+	  =========================================================
+	  
+	  Actions action=new Actions(driver);
+	  action.contextClick(linktext).perform();  note: contextClick-> right click on webElelement
+	  Robot r=new Robot();
+	  r.KeyPress(KeyEvent.VK_W);
+	  
+	 ===========================================================
+	 Q. what is compositeAction? how do we perform it?
+	 performing multiple actions simutaneously is called as compositeAction
+	 perform method internally calls build() method
+	 mouseover/dropdown menu (actn.MoveToElement(ele))
+	 Handling contextmenu(act.contextClick())
+	 doubleClick()
+	 draganddrop()
+	 
+	 CompositeMethod()
+	 act.sendKeys(Keys.CONTROL).click(menu).build().perform();
+	 
+	 =================================================================
+	 
+	 Robot r=new Robot();
+	 r.KeyPress(KeyEvent.VK_W);
+	 
