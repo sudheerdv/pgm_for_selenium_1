@@ -1,0 +1,40 @@
+How do you set a value from TestNg.xml into TestMethod
+- using TestNG Parameter
+Example:
+TestNg.xml
+parameter.java
+if we run above testNG class directly we get-> TestNG Exception
+
+how do make TestNG to use default value when in parameter value is not specified
+sol: by using @optional Annotation
+
+Imp Question
+1. How do you perform verification in TestNG?
+Using Assert Class 
+Example :
+AssertDemo.java
+
+Impoart
+2.when we use Asssert it will not execute remaining Statements of current statement if comparision fails
+example
+AssertFail.java
+
+To continue the execution even if comparision fails , we use soft assert which has not static method
+in soft assert we Report the status we use assertAll() method at the end as shown below
+SoftAsset.java
+
+to verify basic and Critical feature we use Assert , in All the other places you use softAssert.
+
+Important
+what is the difference between asset and soft assert?
+
+           ASSERT                                 SOFT ASSERT
+1. All the methods are static                    1. All the methods are not static
+2.we do not call Assert ALL                      2. we Should call AssertALL
+3. it will not execute Remaining Statement       3. it will execute Remaining Statement 
+of Current Test method if comaprision fails       even if comaprison fails
+
+
+
+
+
