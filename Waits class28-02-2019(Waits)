@@ -1,0 +1,109 @@
+
+
+Waits in Selenium
+--------
+
+In selenium there are different ways to synchronize script ,one of the frequently used option is
+
+1. Implicitly wait()
+it takes two arguments 1. Long(duration) , 2.TimeUnit (Time unit can be DAYS,HOURS,MINIUTES,SECONDS,MILISECONDS,MICROSECONDS,NANOSECONDS)
+2.the Specified duration used only by findElelemnt() and findElelemnts() statements
+default duration is 0 seconds
+
+Flow diagram
+---------------
+  
+                                             Element is Present?
+									
+							yes                                   No                        polling period
+							
+				1.fE[1st matching Element]                TimeOut?                      500ms
+				2.fES[All matching elements]                  
+				                                             yes
+														               fE[NosuchElelemt Exception]
+															             fES[Empty List]
+															 
+control comes to any find element or any find element statement it check weather any element is present or not
+if any element is present the find element return first matching element ,where as findElelemnts returns first matching element
+if the specified element not present then it will check for the timeout , if the time is over findElement () method will throw 'No Such Element Exception]
+where as findElelemnts returns 'EmptyList', if time is not over it waits for 500ms which is called as 'Polling Period' (present in fluentwait class)
+then it will continue to check the element present or not
+
+Exception: 
+------------
+TimeOut Exception : Selenium Exception (Checked Exception)
+
+
+ExplicitWiat()
+
+In Order to handle Synchronization  of any statement we can use ExplicitWiat
+
+1. WebDriverWait is called ExplicitWait - because we have to specify waiting condition explicitly
+
+
+Flow Diagram
+---------------
+
+                                     Condition is True?
+									 
+							yes                           No                   wait  (Polling Period)
+					Next step/statement            TimeOut?                500ms
+					
+					                                  yes
+											                TimeOut Exception
+													  
+	when the statement comes to waituntil statement it will check the condition , if condition is true , it will go to next statement
+	if condition is false , it will check for timeout, if time is over it will throw 'TimeOutException' else it will wait for 500ms and 
+	continue to check the condition
+	
+	using explicit wait we can handle synchronization of any statement but only one statement at a time.
+	
+	
+	
+	3.Custom Waits
+	----------------
+	Handling the synchronization of automation script by writing our own code is called custome wait
+	eg: lap
+	
+	Q) write a script to check weather Login page is loaded or not within 3 Seconds ?
+
+Note: pageload timeout is only used  by get method
+
+  Q) what are the different ways to synchronize the script?
+  1.Implicit wait
+  2. Explicit Wait
+  3. Thread.sleep
+  4. Custome wait
+  
+  Q) what are the differences between Implicit wait and Explicit Wait ?
+  
+  
+                   Implicit Wait                                  Explicit Wait
+	       ---------------------------------			   --------------------------------------------
+		1. We can handle synchronization  of all              1. we can handle synchronization of any method 
+		findElelement and findElelements methods               but only one at a time.
+		
+		2.we do not specifiy waiting Condition Explicitly     2. We should Specifiy waiting condition explicitly
+		 (Built-In)
+		 
+		3. Time unit can be DAYS,HOURS,MINIUTES,SECONDS       3. Time unit only in seconds
+		MILISECONDS,MICROSECONDS,NANOSECONDS
+		
+		4. After the timeout we get 'Nosuch Element' Exception 4. After TimeOut we get 'TimeOutException'
+		or EmptyList
+		
+	Q) what is the Polling period ?
+	 500 mili seconds
+ 
+  
+  
+
+
+
+
+
+
+
+
+
+
