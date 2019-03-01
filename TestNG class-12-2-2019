@@ -1,0 +1,102 @@
+Types of class
+--------------------
+POM        #page      (depends on number of web pagsin the application)
+TestClass  #TestCases (depends on no of testcases)
+
+100MTC     -MAIN CLICK RUN 100 TIMES to Avoid we go for TestNG
+
+
+Unit Testing Tool TestNG - Junit
+
+In selenium we use TestNG to
+1. Run Multiple Test Class
+2. Result
+
+We can install TestNG using market palace in selenium
+
+Configuring Java Project
+right click on java project -
+go to build path
+Select add libraries
+select TestNG -> click Next -> Click Finish
+
+
+TESTNG
+1.It is a Test class which contains methods developed using Test Annotation
+2. In TestNG Class we do not use main Method
+3.To Print the message we use Reporter.log("Demo"); , Instead of System.out.println("Demo");
+4.if you execute the TestNG Class it is automatically generate Test-Output folder(Emailable report.html file) Refresh java project
+
+5.To run multiple Test class we use testng.xml -suite file
+6.to create a suite file
+a.right click on java project -> go to testng
+b. select convert to testng > click finish
+
+
+To run:
+----------
+right click on testng.xml -> RunAs TestNG
+
+@DataProvider
+@BeforeSuite
+@Test
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
+
+@Parameters
+@Optional
+@Factory
+@Listners
+
+Default Execution Order of Annotation
+
+1.@BeforeSuite
+2.@BeforeTest
+3.@BeforeClass
+4.@BeforeMethod
+5.@Test
+6.@AfterMethod
+7.@AfterClass
+8.@AfterTest
+9.@AfterSuite
+
+
+Question:
+-------------------
+
+what is the difference between @Beforetest and @BeforeMethod
+
+BeforeTest - is Exceuted Before Every Test Block present in testng.xml
+BeforeMethod - is Exceuted Before Every Test method @Test) present in the TestNG Class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
