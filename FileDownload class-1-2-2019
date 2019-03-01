@@ -1,0 +1,62 @@
+Bhanu class  1-2-2019 Friday
+
+Handling FileDownload popup
+------------------------------
+1.we can inspect this popup
+2. we cannot move this popup
+3. this popup is used to download the file
+
+solution:
+we cannot handle this popup using selenium program , hence we use third party tools or classes.
+
+In order to perform keyboard and mouse related actions we use Robot class present in java.awt package(Abstract Window ToolKit)
+
+when we create an object of Robot class it will throw AWT Exception-CompileTimeException
+
+Questions
+Automte following Scenarios:
+
+1.open firefox driver
+2.go to download page of selenium
+3.click on download link of java which will display File download popup
+4.select second radio button by pressing alt+second
+5.click ok by pressing enter key
+
+to handle file download popup you will use Robot class in all the Browsers except chrome 
+in chrome when we click on download link it will download the file without displaying the file download popup
+
+POPUP
+-----
+
+JSpopup                   d.s().a()
+Hidden division popup     FE
+Child Browser popup       d.s.w()
+Filedownload Popup        Robot class
+
+Tips: sudheer 3years Selenium (Resume Formatt)
+
+
+Handling FileUploading Popup
+-----------------------------------
+1. we cannt inspect the popup
+2. we can move the popup
+3. this popup is displayed after clicking on browse Button /choose File Button 
+and popup contains two button open and clos
+
+Solution:
+we cannot directly perform any action on File Upload popup , in order to upload the file we use SendKeys method for the upload method
+in sendKeys method we must specify 'Absolute path of the File' or else we get Webdriver Exception(FilenotFound)
+
+Exception : WebDriverException - Selenium unchecked
+
+In order use Relative path we use File Class using which we convert it into Absolute Path
+and we Absolute path as argument to the sendKey method
+
+
+
+
+
+
+
+
+
