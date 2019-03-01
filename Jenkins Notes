@@ -1,0 +1,70 @@
+
+Jenkins
+-------------
+Jenkins is a continuous Integration Tool , used by developers to create and manage the build
+We can download and install Jenkins from
+https://jenkins.io/
+
++ git Plugin + maven Plugin
+1.Integrating Automation with Jenkins
+
+Required Information
+
+1.URL of Jenkins:
+2.UserName
+3.Password
+
+Developer Project Name
+
+1.open the browser enter the url of Jenkins
+2.Enter username and Password and click signIn
+
+Click on new Item
+------------------
+-Specify the name
+-click on maven Project
+-click Ok
+
+Click on SourceCode Management
+1.select Git Radio Button
+
+2.Paste the repository URI
+3.Click on Build Triggers Menu
+4.select the check Build after other Projects are Build
+Project to watch -> Developer Project Name(p1)
+
+Note : 
+In order to edit Project Configuration.
+Login to Jenkins.
+Click on Automation Project ->click on Configure
+do the Required Changes and Save
+
+Q) How developer creates the Build 
+1.Login to Jenkins
+2.Click on developer project
+3.Click on build now
+when developer clicks on build now ,it takes the source code compiles ,unitScripts[white box testing]
+Compress on a compiled code 
+installed the build
+Send Email Notification
+
+After completeion of developer project , it automatically startrs the execution of the automation project where
+it download the framework from gitHub and Execute the pom.xml
+pom.xml update the jar file and it executes TestNg.xml
+Testng.xml executes all the test classes and Result will be stored under target folder
+we can also see the result in jenkin webpage
+
+How to see the Results in Jenkins
+----------------------------------
+1.Login into Jenkins
+2. Click on auotmation Project
+3. Click on the latest link presrent on the build History
+4. Click on Test result 
+(Text Report , Tabular Report)
+
+Jenkins is a webApplication we can access it form any location
+using Jenkins we can automate and Execute the framwwork
+using Jenkins we can see old results also.
+
+
+
