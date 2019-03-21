@@ -1,0 +1,29 @@
+
+get()
+getTitle()
+getCurrentUrl()
+getPageSource()
+findElement()
+findElements()
+getWindowHandle()
+getWindowHandles()
+
+
+
+JavaScriptExecutor(I)
+---------------------
+executeScript()
+executeAsyncScript()
+
+
+TakeScreenshot
+----------------------
+getScreenShotAS()
+
+Driver Executables
+----------------------
+
+Browser   Class                      Driver exe file        Key
+chrome    ChromeDriver               chromedriver.exe    Webdriver.chrome.driver
+Firefox   FirefoxDriver              geckodriver.exe     webdriver.gecko.driver
+InternetEx InternetExplorerDriver    IEDriverServer.exe  webdriver.ie.driver
