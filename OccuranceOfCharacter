@@ -1,0 +1,27 @@
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class OccuranceOfCharacter 
+{	
+	public static void main(String[] args)
+	{
+		String str="hello hai you";
+		
+		str=str.replaceAll(" ", "");
+		
+		Map mp=new LinkedHashMap<Character, Integer>();
+		
+		for(char ch:str.toCharArray())
+		{
+			if(mp.containsKey(ch))
+			{
+				mp.put(ch, (Integer)mp.get(ch)+1);				
+			}
+			else
+			{
+				mp.put(ch, 1);
+			}
+		}
+		System.out.print(mp);
+	}	
+}
