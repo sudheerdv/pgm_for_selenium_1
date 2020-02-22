@@ -1,0 +1,50 @@
+
+public class SumofNumInString 
+{
+	public static void main(String[] args) 
+	{
+		
+		//First Type different numbers
+		String str="testcas100 testcase75 testcase50";
+		
+		str=str.replaceAll("[^0-9]", " ");
+		int sum=0;
+		//System.out.println(str);
+		
+		String [] str1 = str.split(" ");
+		
+		for (int i = 0; i < str1.length; i++) 
+		{
+			if(str1[i].isEmpty())			
+			{
+				
+			}
+			else
+			{
+				sum=sum+Integer.parseInt(str1[i]);
+			}
+			
+		}
+		System.out.println(sum);
+		
+		
+		
+		//2nd type - sum of each digit
+		
+		String str2="testcas100 testcase75 testcase50";
+		
+		char[] ch=str2.toCharArray();
+		
+		int sum1=0;
+		
+		for(int i=0;i<ch.length;i++)
+		{
+			if(Character.isDigit(ch[i]))
+			{
+				sum1=sum1+Character.getNumericValue(ch[i]);
+			}
+		}		
+		System.out.println(sum1);
+		
+	}
+}
